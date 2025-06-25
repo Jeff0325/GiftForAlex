@@ -24,15 +24,33 @@
     <span class="m message-beloved">I LOVE YOU</span>
     <span class="m message-eugene">Forever yours, Chon</span>
   </div>
-  <div class="photo-gallery hidden">
-  <img src="./images/1.jpg" class="gallery-item small" />
-  <img src="./images/2.jpg" class="gallery-item small" />
-  <img src="./images/3.jpg" class="gallery-item small" />
-  <img src="./images/8.jpg" class="gallery-item big" />
-  <img src="./images/5.jpg" class="gallery-item small" />
-  <img src="./images/6.jpg" class="gallery-item small" />
-  <img src="./images/7.jpg" class="gallery-item small" />
+<div class="photo-gallery hidden">
+<img src="./images/scatter.png" data-src="./images/1.jpg" class="gallery-item small" />
+<img src="./images/scatter.png" data-src="./images/2.jpg" class="gallery-item small" />
+<img src="./images/scatter.png" data-src="./images/3.jpg" class="gallery-item small" />
+<img src="./images/scatter.png" data-src="./images/8.jpg" class="gallery-item big" />
+<img src="./images/scatter.png" data-src="./images/5.jpg" class="gallery-item small" />
+<img src="./images/scatter.png" data-src="./images/6.jpg" class="gallery-item small" />
+<img src="./images/scatter.png" data-src="./images/7.jpg" class="gallery-item small" />
+  <img id="scatter-result" class="scatter-result hidden" />
+  <button id="spinButton" style="
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 16px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: none;
+  ">SPIN</button>
 </div>
+
 
   <div class="container">
     <canvas id="canvas"></canvas>
