@@ -73,22 +73,21 @@ canvas {
   animation-fill-mode: forwards;
 }
 
-/* Adjust font sizes to scale on small screens */
 .greeting .message-love {
   font-family: 'GamjaFlower';
-  font-size: 8vw;
+  font-size: 7vw;
   animation-name: love;
   animation-duration: 4s;
   animation-delay: 1s;
-  top: 35vh;
-  left: 15vw;
+  top: 30vh;
+  left: 5vw;
 }
 
 .greeting .message-masha {
   font-family: 'BungeeShade';
-  font-size: 10vw;
-  top: 47vh;
-  left: 43vw;
+  font-size: 9vw;
+  top: 43vh;
+  left: 30vw;
   animation-name: masha;
   animation-duration: 3s;
   animation-delay: 3.6s;
@@ -96,8 +95,8 @@ canvas {
 
 .greeting .bigger {
   display: flex;
-  gap: 5vw;
-  left: 10vw;
+  gap: 3vw;
+  left: 5vw;
   bottom: 8vh;
   align-items: flex-end;
   animation-name: bigger;
@@ -116,40 +115,39 @@ canvas {
 }
 
 .greeting .message-bigger0 {
-  font-size: 6vw;
+  font-size: 5vw;
   animation-delay: 7.9s;
 }
 
 .greeting .message-bigger1 {
-  font-size: 8vw;
-  margin-left: 2vw;
+  font-size: 6.5vw;
+  margin-left: 1vw;
   animation-delay: 8.4s;
 }
 
 .greeting .message-bigger2 {
-  font-size: 12vw;
-  margin-left: 3vw;
+  font-size: 9vw;
+  margin-left: 1.5vw;
   animation-delay: 8.9s;
 }
 
 .greeting .message-day {
   font-family: 'MontserratSubrayada';
-  font-size: 6vw;
-  top: -5vh;
-  left: 43vw;
+  font-size: 5.5vw;
+  top: -2vh;
+  left: 30vw;
   color: white;
   animation-name: every-day;
   animation-duration: 3s;
   animation-delay: 10.5s;
 }
 
-.greeting .message-inspiration,
-.greeting .message-thrill {
+.greeting .message-inspiration {
   font-family: 'DelaGothicOne';
-  font-size: 6vw;
-  top: 38vh;
-  left: -5vw;
-  letter-spacing: 8vw;
+  font-size: 4.5vw;
+  top: 35vh;
+  left: 5vw;
+  letter-spacing: 2vw;
   white-space: nowrap;
   animation-name: inspiration;
   animation-duration: 3s;
@@ -157,15 +155,24 @@ canvas {
 }
 
 .greeting .message-thrill {
+  font-family: 'DelaGothicOne';
+  font-size: 4vw;
+  top: 41vh;
+  left: 2vw;
+  white-space: normal;
+  letter-spacing: normal;
+  width: 96vw;
+  animation-name: inspiration;
+  animation-duration: 3s;
   animation-delay: 16s;
-  top: 44vh;
+  text-align: left;
 }
 
 .greeting .message-looking {
   font-family: 'Notable';
-  font-size: 6vw;
-  top: 54vh;
-  left: 10vw;
+  font-size: 5.5vw;
+  top: 52vh;
+  left: 5vw;
   animation-name: bigger;
   animation-duration: 4s;
   animation-delay: 19s;
@@ -173,7 +180,7 @@ canvas {
 
 .greeting .message-looking > span {
   font-family: 'Notable';
-  font-size: 5.5vw;
+  font-size: 5vw;
   animation-name: looking;
   animation-duration: 3.5s;
   animation-delay: 19s;
@@ -181,9 +188,9 @@ canvas {
 
 .greeting .message-being {
   font-family: 'IndieFlower';
-  font-size: 6vw;
-  top: 32vh;
-  left: 20vw;
+  font-size: 5vw;
+  top: 29vh;
+  left: 8vw;
   animation-name: bigger;
   animation-duration: 5s;
   animation-delay: 23s;
@@ -213,8 +220,9 @@ canvas {
 .greeting .message-birthday,
 .greeting .message-beloved {
   font-family: 'RubikMoonrocks';
-  font-size: 10vw;
-  top: 55vh;
+  font-size: 9vw;
+  top: 56vh;
+  left: 10vw;
 }
 
 .greeting .message-birthday {
@@ -230,10 +238,10 @@ canvas {
 }
 
 .greeting .message-eugene {
-  bottom: 40px;
-  right: 50px;
+  bottom: 30px;
+  left: 5vw;
   font-family: 'RampartOne';
-  font-size: 7vw;
+  font-size: 6.5vw;
   animation-name: bigger-appear;
   animation-duration: 3s;
   animation-delay: 34s;
@@ -256,10 +264,25 @@ canvas {
 
   .greeting .message-eugene {
     font-size: 6vw;
+    left: 5vw;
+    right: auto;
   }
 
-  .greeting .message-inspiration,
+  .greeting .message-inspiration {
+    font-size: 4vw;
+    letter-spacing: 1.5vw;
+  }
+
   .greeting .message-thrill {
-    letter-spacing: 4vw;
+    font-size: 3.5vw;
+  }
+
+  .greeting .bigger {
+    gap: 2vw;
+  }
+
+  .greeting .message-birthday,
+  .greeting .message-beloved {
+    font-size: 8vw;
   }
 }

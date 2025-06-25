@@ -2,25 +2,15 @@ const greetingEl = document.querySelector('.greeting');
 const containerEl = document.querySelector('.container');
 const nameEl = document.querySelector('.name');
 
-if (window.innerWidth < 1110) {
-  document.body.removeChild(greetingEl);
-  document.body.removeChild(containerEl);
-  document.body.removeChild(nameEl);
+// Removed screen width check
+setTimeout(() => {
+  const script = document.createElement('script');
+  script.type = 'module';
+  script.src = './script.js';
 
-  const lowWidthSpan = document.createElement('span');
+  document.body.appendChild(script);
 
-  lowWidthSpan.innerText = 'Use more wide screen. (min. width = 1110px)';
-  lowWidthSpan.classList.add('error');
-
-  document.body.appendChild(lowWidthSpan);
-} else {
-  setTimeout(() => {
-    const script = document.createElement('script');
-    script.type = 'module';
-    script.src = './script.js';
-  
-    document.body.appendChild(script);
-  
+  if (greetingEl) {
     document.body.removeChild(greetingEl);
-  }, 38000);
-}
+  }
+}, 38000);
