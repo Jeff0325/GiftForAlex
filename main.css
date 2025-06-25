@@ -7,6 +7,7 @@ html, body {
   margin: 0;
   position: relative;
 }
+
 .container {
   position: fixed;
   top: 0;
@@ -16,15 +17,16 @@ html, body {
   display: flex;
   flex-direction: column-reverse;
   align-items: start;
-  background-color: #000000;
+  background-color: #000;
   z-index: 2;
 }
+
 .clean-btn {
   z-index: 1;
   font-family: sans-serif;
-  font-size: 15px;
+  font-size: 4vw;
   color: white;
-  text-shadow: 0 0 10px #000000;
+  text-shadow: 0 0 10px #000;
   user-select: none;
   margin: 0 0 15px 25px;
   padding: 10px 20px;
@@ -32,6 +34,7 @@ html, body {
   text-decoration: underline;
   opacity: .5;
 }
+
 canvas {
   position: absolute;
   top: 0;
@@ -47,8 +50,8 @@ canvas {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  font-size: 4vw;
-  text-shadow: 0 0 5px #000000;
+  font-size: 6vw;
+  text-shadow: 0 0 5px #000;
   user-select: none;
   pointer-events: none;
   z-index: 2;
@@ -70,9 +73,10 @@ canvas {
   animation-fill-mode: forwards;
 }
 
+/* Adjust font sizes to scale on small screens */
 .greeting .message-love {
   font-family: 'GamjaFlower';
-  font-size: 68px;
+  font-size: 8vw;
   animation-name: love;
   animation-duration: 4s;
   animation-delay: 1s;
@@ -82,7 +86,7 @@ canvas {
 
 .greeting .message-masha {
   font-family: 'BungeeShade';
-  font-size: 90px;
+  font-size: 10vw;
   top: 47vh;
   left: 43vw;
   animation-name: masha;
@@ -92,9 +96,9 @@ canvas {
 
 .greeting .bigger {
   display: flex;
-  gap: 30px;
+  gap: 5vw;
   left: 10vw;
-  bottom: 80px;
+  bottom: 8vh;
   align-items: flex-end;
   animation-name: bigger;
   animation-duration: 3s;
@@ -112,25 +116,25 @@ canvas {
 }
 
 .greeting .message-bigger0 {
-  font-size: 48px;
+  font-size: 6vw;
   animation-delay: 7.9s;
 }
 
 .greeting .message-bigger1 {
-  font-size: 68px;
-  margin-left: 20px;
+  font-size: 8vw;
+  margin-left: 2vw;
   animation-delay: 8.4s;
 }
 
 .greeting .message-bigger2 {
-  font-size: 130px;
-  margin-left: 25px;
+  font-size: 12vw;
+  margin-left: 3vw;
   animation-delay: 8.9s;
 }
 
 .greeting .message-day {
   font-family: 'MontserratSubrayada';
-  font-size: 56px;
+  font-size: 6vw;
   top: -5vh;
   left: 43vw;
   color: white;
@@ -142,10 +146,10 @@ canvas {
 .greeting .message-inspiration,
 .greeting .message-thrill {
   font-family: 'DelaGothicOne';
-  font-size: 48px;
+  font-size: 6vw;
   top: 38vh;
   left: -5vw;
-  letter-spacing: 80px;
+  letter-spacing: 8vw;
   white-space: nowrap;
   animation-name: inspiration;
   animation-duration: 3s;
@@ -159,7 +163,7 @@ canvas {
 
 .greeting .message-looking {
   font-family: 'Notable';
-  font-size: 44px;
+  font-size: 6vw;
   top: 54vh;
   left: 10vw;
   animation-name: bigger;
@@ -169,9 +173,7 @@ canvas {
 
 .greeting .message-looking > span {
   font-family: 'Notable';
-  font-size: 42px;
-  top: 54vh;
-  left: 6vw;
+  font-size: 5.5vw;
   animation-name: looking;
   animation-duration: 3.5s;
   animation-delay: 19s;
@@ -179,9 +181,9 @@ canvas {
 
 .greeting .message-being {
   font-family: 'IndieFlower';
-  font-size: 52px;
+  font-size: 6vw;
   top: 32vh;
-  left: 32vw;
+  left: 20vw;
   animation-name: bigger;
   animation-duration: 5s;
   animation-delay: 23s;
@@ -201,8 +203,8 @@ canvas {
       #ee4b4b 100%
     );
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   animation-name: being;
   animation-duration: 5s;
   animation-delay: 23s;
@@ -211,7 +213,7 @@ canvas {
 .greeting .message-birthday,
 .greeting .message-beloved {
   font-family: 'RubikMoonrocks';
-  font-size: 90px;
+  font-size: 10vw;
   top: 55vh;
 }
 
@@ -220,17 +222,18 @@ canvas {
   animation-duration: 3.5s;
   animation-delay: 27s;
 }
+
 .greeting .message-beloved {
   animation-name: beloved;
   animation-duration: 3s;
   animation-delay: 30s;
 }
 
-.greeting .message-eugene{
+.greeting .message-eugene {
   bottom: 40px;
   right: 50px;
   font-family: 'RampartOne';
-  font-size: 62px;
+  font-size: 7vw;
   animation-name: bigger-appear;
   animation-duration: 3s;
   animation-delay: 34s;
@@ -238,34 +241,25 @@ canvas {
 
 .error {
   font-family: 'IndieFlower';
-  font-size: 24px;
-  margin: 0px auto;
+  font-size: 4vw;
+  margin: 0 auto;
   display: block;
   text-align: center;
   margin-top: 35vh;
 }
 
-@media all and (max-width: 1200px) {
-  .greeting .message-bigger0 {
-    font-size: 38px;
-    animation-delay: 7.9s;
-  }
-  
-  .greeting .message-bigger1 {
-    font-size: 48px;
-    margin-left: 0px;
-    animation-delay: 8.4s;
-  }
-  
-  .greeting .message-bigger2 {
-    font-size: 82px;
-    margin-left: 5px;
-    animation-delay: 8.9s;
-  }
-}
-
-@media all and (min-width: 640px) {
+/* Extra small screens (phones < 600px) */
+@media all and (max-width: 600px) {
   .name {
-      font-size: 45px
+    font-size: 7vw;
+  }
+
+  .greeting .message-eugene {
+    font-size: 6vw;
+  }
+
+  .greeting .message-inspiration,
+  .greeting .message-thrill {
+    letter-spacing: 4vw;
   }
 }
