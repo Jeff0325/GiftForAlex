@@ -12,7 +12,9 @@ const imagePaths = [
   './images/4.jpg',
   './images/5.jpg',
   './images/6.jpg',
-  './images/7.jpg'
+  './images/7.jpg',
+  './images/9.jpg',
+  './images/10.jpg'
 ];
 
 const scatterImage = './images/scatter.png';
@@ -55,29 +57,30 @@ spinButton.addEventListener('click', () => {
   resultImage.classList.remove('hidden');
 
   let index = 0;
-  const total = imagePaths.length;
+  const shuffled = shuffleArray(imagePaths);
 
-  const shuffledImages = shuffleArray(imagePaths); // No duplicates
+  // Pick 1 image for result
+  const finalImage = shuffled[0];
+  const remainingImages = shuffled.slice(1); // rest for gallery
 
   // Spin animation
   const spinInterval = setInterval(() => {
-    resultImage.src = shuffledImages[index % total];
+    resultImage.src = shuffled[index % shuffled.length];
     index++;
   }, 150);
 
-  // Stop spinning after 2.5s
   setTimeout(() => {
     clearInterval(spinInterval);
 
-    const finalImage = shuffledImages[0]; // Pick the first from shuffled
+    // Set final result
     resultImage.src = finalImage;
 
-    // Assign each unique image to the gallery
+    // Fill gallery with rest of shuffled images
     galleryImages.forEach((img, i) => {
-      img.src = shuffledImages[i] || '';
+      img.src = remainingImages[i] || ''; // fallback to blank
     });
 
-    // Wait 10s before hiding gallery and showing flower animation
+    // After 10s, hide gallery and result, show animation
     setTimeout(() => {
       galleryEl.classList.remove('show');
       galleryEl.classList.add('hidden');
